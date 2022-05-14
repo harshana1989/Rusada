@@ -1,0 +1,13 @@
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\bin\Debug\net6.0\Rusada.DataContext.deps.json
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\bin\Debug\net6.0\Rusada.DataContext.runtimeconfig.json
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\bin\Debug\net6.0\Rusada.DataContext.dll
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\bin\Debug\net6.0\ref\Rusada.DataContext.dll
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\bin\Debug\net6.0\Rusada.DataContext.pdb
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\Rusada.DataContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\Rusada.DataContext.AssemblyInfoInputs.cache
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\Rusada.DataContext.AssemblyInfo.cs
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\Rusada.DataContext.csproj.CoreCompileInputs.cache
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\Rusada.DataContext.dll
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\ref\Rusada.DataContext.dll
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\Rusada.DataContext.pdb
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\Rusada.DataContext.genruntimeconfig.cache

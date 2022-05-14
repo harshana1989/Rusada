@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7db6453a-9824-43f7-832a-4716f123cf7c": {
+      "ProjectGuid": "7db6453a-9824-43f7-832a-4716f123cf7c",
+      "DisplayName": "Rusada.Database",
+      "ColorIndex": 0
+    },
+    "fdc7cea5-e38c-44f8-beaa-09d43bd1c9f2": {
+      "ProjectGuid": "fdc7cea5-e38c-44f8-beaa-09d43bd1c9f2",
+      "DisplayName": "Rusada.DataContext",
+      "ColorIndex": 1
+    },
+    "356ca54b-0979-4733-90c9-09f5fb393fa7": {
+      "ProjectGuid": "356ca54b-0979-4733-90c9-09f5fb393fa7",
+      "DisplayName": "Rusada.Data",
+      "ColorIndex": 2
+    },
+    "63b7ddf0-1749-4e30-8e03-70d8aff80cea": {
+      "ProjectGuid": "63b7ddf0-1749-4e30-8e03-70d8aff80cea",
+      "DisplayName": "Rusada.Business",
+      "ColorIndex": 3
+    },
+    "3b2c61a4-5d71-44dc-9d6d-2b7da3aecbd0": {
+      "ProjectGuid": "3b2c61a4-5d71-44dc-9d6d-2b7da3aecbd0",
+      "DisplayName": "Rusada.Common",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "00a4dc5f-549a-46ff-a28b-fbbc415141a8": {
+      "ProjectGuid": "00a4dc5f-549a-46ff-a28b-fbbc415141a8",
+      "DisplayName": "Rusada.API",
+      "ColorIndex": 5
+    },
+    "e5e4ed23-1550-4d9a-acb6-161a95abc7f2": {
+      "ProjectGuid": "e5e4ed23-1550-4d9a-acb6-161a95abc7f2",
+      "DisplayName": "Rusada.API",
+      "ColorIndex": 6
+    },
+    "fa7f853a-e8fa-4c32-b510-16d61853397c": {
+      "ProjectGuid": "fa7f853a-e8fa-4c32-b510-16d61853397c",
+      "DisplayName": "Rusada.API",
+      "ColorIndex": 7
+    },
+    "aa62cda2-5736-4099-965e-b94d33a74795": {
+      "ProjectGuid": "aa62cda2-5736-4099-965e-b94d33a74795",
+      "DisplayName": "Rusada.App",
+      "ColorIndex": 8
+    },
+    "306fef1a-09d5-47c3-b316-96025249c946": {
+      "ProjectGuid": "306fef1a-09d5-47c3-b316-96025249c946",
+      "DisplayName": "Rusada.API",
+      "ColorIndex": 9
+    }
+  },
+  "NextColorIndex": 10
+}

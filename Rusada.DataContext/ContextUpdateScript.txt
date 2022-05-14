@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Data Source=HARSHANA;Database=RusadaDB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False" Microsoft.EntityFrameworkCore.SqlServer -context "RsadaDbContext" -Force -NoPluralize -NoOnConfiguring

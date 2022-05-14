@@ -1,0 +1,11 @@
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\bin\Debug\net6.0\Rusada.Common.deps.json
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\bin\Debug\net6.0\Rusada.Common.dll
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\bin\Debug\net6.0\ref\Rusada.Common.dll
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\bin\Debug\net6.0\Rusada.Common.pdb
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\obj\Debug\net6.0\Rusada.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\obj\Debug\net6.0\Rusada.Common.AssemblyInfoInputs.cache
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\obj\Debug\net6.0\Rusada.Common.AssemblyInfo.cs
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\obj\Debug\net6.0\Rusada.Common.csproj.CoreCompileInputs.cache
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\obj\Debug\net6.0\Rusada.Common.dll
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\obj\Debug\net6.0\ref\Rusada.Common.dll
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.Common\obj\Debug\net6.0\Rusada.Common.pdb
