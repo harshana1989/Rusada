@@ -1,4 +1,5 @@
 ﻿using Rusada.Common.CommenModel;
+using Rusada.Common.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace Rusada.Common.Managers
         ServiceResponse GeModel();
         ServiceResponse GetMake();
         ServiceResponse GetSpotter();
+        ServiceResponse SaveSpotter(SpotterEntity spotterEntity);
     }
 }
