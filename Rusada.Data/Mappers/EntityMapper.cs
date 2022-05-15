@@ -29,6 +29,7 @@ namespace Rusada.Data.Mappers
                 cfg.CreateMap<AirlineModel, ModelEntity>();
                 cfg.CreateMap<Spotter, SpotterEntity>();
 
+
             });
         }
         private void Create()

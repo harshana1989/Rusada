@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Rusada.Common.CommenModel;
+using Rusada.Common.Entities;
 using Rusada.Common.Interfases;
 using Rusada.Common.Managers;
 using System;
@@ -74,7 +75,23 @@ namespace Rusada.API.Controllers
         {
             try
             {
-                return spotterManager.GetSpotter();
+                var res = spotterManager.GetSpotter();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.StackTrace);
+                return serviceResponseErrorMapper.Map(new List<Message> { errorMessages.GetServiceErrorMessage("") });
+            }
+        }
+
+        [HttpGet("SaveSpotter")]
+        public async Task<ServiceResponse> SaveSpotter(SpotterEntity spotterEntity)
+        {
+            try
+            {
+                var res = spotterManager.SaveSpotter(spotterEntity);
+                return res;
             }
             catch (Exception ex)
             {

@@ -54,7 +54,8 @@ namespace Rusada.Data.Repositories
         {
             try
             {
-                var spotterList = this.entities.Spotter.ToList();
+                var spotterList = this.entities.Spotter.AsNoTracking().ToList();
+                //var spotterList = this.entities.Spotter.Include(z => z.Make).Include(z => z.Model).ToList();
                 return this.entityMapper.Map<List<Spotter>, List<SpotterEntity>>(spotterList);
             }
             catch (Exception)
@@ -64,9 +65,32 @@ namespace Rusada.Data.Repositories
             }
         }
 
-        public Task<SpotterEntity> Save(SpotterEntity clientNote)
+        public async Task<SpotterEntity> Save(SpotterEntity clientNote)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var spotter=entityMapper.Map<SpotterEntity,Spotter>(clientNote);
+                if (clientNote.Id != 0)
+                {
+                    var spotterList = this.entities.Spotter.FirstOrDefault(a => a.Id == clientNote.Id);
+                    if (spotterList == null)
+                    {
+                        this.entities.Spotter.Add(spotter);
+                        await this.entities.SaveChangesAsync();
+                    }
+                }
+                else
+                {
+                    this.entities.Spotter.Add(spotter);
+                    await this.entities.SaveChangesAsync();
+                }
+                return entityMapper.Map<Spotter, SpotterEntity > (spotter);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

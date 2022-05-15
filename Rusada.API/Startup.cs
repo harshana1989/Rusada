@@ -52,6 +52,8 @@ namespace Rusada.API
             app.UseRouting();
 
             app.UseAuthorization();
+            
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); app.UseHttpsRedirection();
 
             app.UseEndpoints(endpoints =>
             {

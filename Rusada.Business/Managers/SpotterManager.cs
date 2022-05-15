@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Rusada.Common.CommenModel;
+using Rusada.Common.Entities;
 using Rusada.Common.Interfases;
 using Rusada.Common.Managers;
 using System;
@@ -57,6 +58,20 @@ namespace Rusada.Business.Managers
             try
             {
                 var result = spotterRepositories.GetSpotters();
+                return serviceResponseMapper.Map(result);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public ServiceResponse SaveSpotter(SpotterEntity spotterEntity)
+        {
+            try
+            {
+                var result = spotterRepositories.Save(spotterEntity);
                 return serviceResponseMapper.Map(result);
             }
             catch (Exception)
