@@ -1,0 +1,55 @@
+<form [formGroup]="spotterForm">
+<div class="row justify-content-center">
+<div class="col-md-3">
+
+</div>
+<div class="col-md-6">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Make</label>
+            <select formControlName="makeId"  class="form-select">
+              <option selected>Choose...</option>
+              <option *ngFor="let c of make">{{c.name}}</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Model</label>
+            <select formControlName="modelId" class="form-select">
+              <option selected>Choose...</option>
+              <option *ngFor="let c of model">{{c.name}}</option>
+            </select>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Registration</label>
+            <input type="text" class="form-control" formControlName="registation" placeholder="G-RNAC”">
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Location</label>
+            <input type="text" class="form-control" formControlName="location" placeholder="">
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Date</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary" [formGroup]="spotterForm" (click)="onSubmit()" >Submit </button>
+          </div>
+          <div>
+            <div [hidden]="!isNotificationHidden" class="alert alert-success" role="alert">{{notification}}
+            </div>
+          </div>
+    </div>
+</div>
+<div class="col-md-3">
+    
+</div>
+   </div>
+  </form>
