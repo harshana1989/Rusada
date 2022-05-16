@@ -11,6 +11,7 @@ namespace Rusada.DataContext
         public string? Registration { get; set; }
         public string? Location { get; set; }
         public DateTime? Date { get; set; }
+        public bool? IsActive { get; set; }
 
         public virtual Make? Make { get; set; }
         public virtual AirlineModel? Model { get; set; }

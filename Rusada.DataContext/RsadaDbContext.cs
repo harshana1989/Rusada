@@ -38,6 +38,8 @@ namespace Rusada.DataContext
 
                 entity.Property(e => e.Date).HasColumnType("datetime");
 
+                entity.Property(e => e.IsActive).HasDefaultValueSql("('True')");
+
                 entity.Property(e => e.Location).HasMaxLength(255);
 
                 entity.Property(e => e.Registration).HasMaxLength(7);

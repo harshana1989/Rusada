@@ -11,3 +11,4 @@ C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\R
 C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\ref\Rusada.DataContext.dll
 C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\Rusada.DataContext.pdb
 C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\Rusada.DataContext.genruntimeconfig.cache
+C:\Users\harsh\source\repos\RusadaSolution\Rusada.DataContext\obj\Debug\net6.0\Rusada.DataContext.csproj.AssemblyReference.cache
