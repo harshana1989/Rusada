@@ -67,6 +67,20 @@ namespace Rusada.Business.Managers
             }
         }
 
+        public ServiceResponse GetSpotterById(int SpotterId)
+        {
+            try
+            {
+                var result = spotterRepositories.GetSpottersById(SpotterId);
+                return serviceResponseMapper.Map(result);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public ServiceResponse SaveSpotter(SpotterEntity spotterEntity)
         {
             try

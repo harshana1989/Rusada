@@ -28,17 +28,17 @@ namespace Rusada.Business.Extensions
             //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             #endregion
 
-            services.AddScoped<IEntityMapper, EntityMapper>();
+            services.AddTransient<IEntityMapper, EntityMapper>();
 
-            services.AddScoped<IErrorMessages, ErrorMessages>();
+            services.AddTransient<IErrorMessages, ErrorMessages>();
 
             //#region Managers
-            services.AddScoped<ISpotterManager, SpotterManager>();
+            services.AddTransient<ISpotterManager, SpotterManager>();
 
             //#endregion
 
             //#region Repository
-            services.AddScoped<ISpotterRepositories, SpotterRepositories>();
+            services.AddTransient<ISpotterRepositories, SpotterRepositories>();
             //#endregion
 
             #region Mappers
