@@ -13,6 +13,7 @@ namespace Rusada.Common.Managers
         ServiceResponse GeModel();
         ServiceResponse GetMake();
         ServiceResponse GetSpotter();
+        ServiceResponse GetSpotterById(int SpotterId);
         ServiceResponse SaveSpotter(SpotterEntity spotterEntity);
     }
 }

@@ -16,6 +16,12 @@ namespace Rusada.Common.Interfases
         /// <returns></returns>
         Task<List<SpotterEntity>> GetSpotters();
         /// <summary>
+        /// GetSpottersById
+        /// </summary>
+        /// <param name="SpotterId"></param>
+        /// <returns></returns>
+        Task<SpotterEntity> GetSpottersById(int SpotterId);
+        /// <summary>
         /// GetModel
         /// </summary>
         /// <returns></returns>

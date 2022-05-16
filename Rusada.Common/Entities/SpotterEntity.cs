@@ -14,9 +14,10 @@ namespace Rusada.Common.Entities
         public int ModelId { get; set; }
         public string Registration { get; set; }
         public string Location { get; set; }
+        public string ModelName { get; set; }
+        public string MakeName { get; set; }
         public DateTime Date { get; set; }
+        public bool IsActive { get; set; }
 
-        public  MakeEntity Make { get; set; }
-        public virtual ModelEntity Model { get; set; }
     }
 }
