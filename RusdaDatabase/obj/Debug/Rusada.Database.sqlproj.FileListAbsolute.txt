@@ -1,5 +1,6 @@
 C:\Users\harsh\source\repos\RusadaSolution\RusdaDatabase\bin\Debug\Rusada.Database.dacpac
 C:\Users\harsh\source\repos\RusadaSolution\RusdaDatabase\bin\Debug\RusdaDatabase.dll
 C:\Users\harsh\source\repos\RusadaSolution\RusdaDatabase\bin\Debug\RusdaDatabase.pdb
+C:\Users\harsh\source\repos\RusadaSolution\RusdaDatabase\obj\Debug\Rusada.Database.sqlproj.AssemblyReference.cache
 C:\Users\harsh\source\repos\RusadaSolution\RusdaDatabase\obj\Debug\RusdaDatabase.dll
 C:\Users\harsh\source\repos\RusadaSolution\RusdaDatabase\obj\Debug\RusdaDatabase.pdb
