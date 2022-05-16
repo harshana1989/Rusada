@@ -85,12 +85,30 @@ namespace Rusada.API.Controllers
             }
         }
 
-        [HttpGet("SaveSpotter")]
-        public async Task<ServiceResponse> SaveSpotter(SpotterEntity spotterEntity)
+        [HttpPost]
+        public async Task<ServiceResponse> Post(SpotterEntity spotterEntity)
         {
             try
             {
                 var res = spotterManager.SaveSpotter(spotterEntity);
+                return res;
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.StackTrace);
+                return serviceResponseErrorMapper.Map(new List<Message> { errorMessages.GetServiceErrorMessage("") });
+            }
+        }
+        /// <summary>
+        /// GetSpotter
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("GetSpotterById")]
+        public async Task<ServiceResponse> GetSpotter(int SpotterId)
+        {
+            try
+            {
+                var res = spotterManager.GetSpotterById(SpotterId);
                 return res;
             }
             catch (Exception ex)
