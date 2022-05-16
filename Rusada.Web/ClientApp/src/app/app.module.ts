@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SpotterModule } from './customer/spotter.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -24,6 +25,7 @@ import { SpotterModule } from './customer/spotter.module';
     ReactiveFormsModule,
     CoreModule,
     SpotterModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

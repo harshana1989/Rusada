@@ -19,9 +19,9 @@ export class SpotterService {
   handleError(error: Response) {
     return Observable.throw(error.statusText);
   }
-  public getAllByGet<t>(actionUrl: any, param?: any): Observable<t> {
+  public getAllByGet<t>(actionUrl: any, params?: any): Observable<t> {
     const endpointUrl: string = this.baseUrl + actionUrl;
-    return this.http.get<t>(endpointUrl, { params: param })
+    return this.http.get<t>(endpointUrl, { params: params })
       .pipe(
         map((response: t) => { return response; }),
         catchError(this.handleError)
@@ -36,13 +36,26 @@ export class SpotterService {
       );
 
   }
-  public add<T>(actionurl: any, object: any): Observable<T> {
-    const endpointUrl: string = actionurl;
+  public add<T>(actionUrl: any, object: any): Observable<T> {
+    debugger;
+    const endpointUrl: string = this.baseUrl + actionUrl;
     return this.http.post<T>(endpointUrl, object)
       .pipe(
         map((response: T) => { return response; }),
         catchError(this.handleError)
       );
   }
+  public getAllByPost<T>(actionUrl: any, params: any): Observable<T> {
+    debugger;
+    const endpointUrl: string = this.baseUrl + actionUrl;
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    }
+    return this.http.post<T>(endpointUrl, JSON.stringify(params),httpOptions)
+        .pipe(
+            map((response: T) => { return response; }),
+            catchError(this.handleError)
+        );
+}
 }
 

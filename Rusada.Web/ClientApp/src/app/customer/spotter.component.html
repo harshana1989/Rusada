@@ -1,39 +1,44 @@
-
-    <form class="">
-        <div class="row">
-            <div class="col-md-4"> 
-                 <a routerLink="/spotter/0" class="btn btn-primary">Add</a>
-                </div>
-                <div class="col-md-8">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username with two button addons">
-                        <button class="btn btn-green" type="button" style="margin-right: 5px;">Search</button>
-                        <button class="btn btn-red" type="button">Reset</button>
-                      </div>
-                </div>
-        </div>
-        <div>        
-        </div>       
-      </form>
+<form class="">
+  <div class="row">
+    <div class="col-md-4">
+      <a routerLink="/spotter/0" class="btn btn-primary">Add</a>
+    </div>
+    <div class="col-md-8">
+      <div class="input-group">
+        <input type="text" (keypress)="search(myInput.value)" #myInput class="form-control" placeholder="Search">
+        <!-- <button class="btn btn-green" type="button" style="margin-right: 5px;" (click)="search()">Search</button> -->
+        <button class="btn btn-red" type="button" (click)="reset()">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div>
+  </div>
+</form>
 <div class="row">
-<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
     <table class="table">
       <thead class="table-dark">
         <tr>
           <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Make</th>
+          <th scope="col">Model</th>
+          <th scope="col">Location</th>
+          <th scope="col">Registration</th>
+          <th scope="col">Date</th>
+          <th scope="col"></th>
           <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let spotter of spotters">
           <th scope="row">{{spotter.id}}</th>
+          <td>{{spotter.makeName}}</td>
+          <td>{{spotter.modelName}}</td>
           <td>{{spotter.location}}</td>
           <td>{{spotter.registration}}</td>
-          <td>{{spotter.date}}</td>
-          <td> <button routerLink="/spotter/{{spotter.id}}" type="button" class="btn btn-primary" >Edit</button></td>
+          <td>{{spotter.date | date: 'dd/MM/yyyy'}}</td>
+          <td> <button routerLink="/spotter/{{spotter.id}}" type="button" class="btn btn-primary">Edit</button></td>
+          <td> <button (click)="delete(spotter.id)" type="button" class="btn btn-primary">Delete</button></td>
         </tr>
       </tbody>
     </table>

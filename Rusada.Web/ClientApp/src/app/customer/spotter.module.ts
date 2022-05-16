@@ -4,6 +4,7 @@ import { SpotterComponent } from './spotter.component';
 import { AddEditSpotterComponent } from './add-edit-customer/add-edit-spotter.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule  } from '@angular/forms';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ReactiveFormsModule  } from '@angular/forms';
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
+    BsDatepickerModule.forRoot()
   ],
   exports:[
     SpotterComponent

@@ -1,55 +1,78 @@
-<form [formGroup]="spotterForm">
-<div class="row justify-content-center">
-<div class="col-md-3">
-
-</div>
-<div class="col-md-6">
-    <div class="row">
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Make</label>
-            <select formControlName="makeId"  class="form-select">
-              <option selected>Choose...</option>
-              <option *ngFor="let c of make">{{c.name}}</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Model</label>
-            <select formControlName="modelId" class="form-select">
-              <option selected>Choose...</option>
-              <option *ngFor="let c of model">{{c.name}}</option>
-            </select>
-          </div>
-          </div>
-          <div class="row">
-          <div class="col-12">
-            <label for="inputAddress" class="form-label">Registration</label>
-            <input type="text" class="form-control" formControlName="registation" placeholder="G-RNAC”">
-          </div>
-          </div>
-          <div class="row">
-          <div class="col-12">
-            <label for="inputAddress2" class="form-label">Location</label>
-            <input type="text" class="form-control" formControlName="location" placeholder="">
-          </div>
-          </div>
-          <div class="row">
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label">Date</label>
-            <input type="text" class="form-control" id="inputCity">
-          </div>
-          </div>
-          <div class="row">
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary" [formGroup]="spotterForm" (click)="onSubmit()" >Submit </button>
-          </div>
-          <div>
-            <div [hidden]="!isNotificationHidden" class="alert alert-success" role="alert">{{notification}}
-            </div>
-          </div>
+<form [formGroup]="spotterForm" (ngSubmit)="onSubmit()">
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <div class="col-12">
+        <button type="Back" routerLink="/">Spotter List </button>
+      </div>
     </div>
-</div>
-<div class="col-md-3">
-    
-</div>
-   </div>
-  </form>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="make" class="form-label">Make</label>
+          <select formControlName="makeId" class="form-select" [ngClass]="{ 'is-invalid': submitted && f.makeId.errors }">
+            <option selected>Choose...</option>
+            <option *ngFor="let c of make" [value]="c.id">{{c.name}}</option>
+          </select>
+          <div *ngIf="submitted && f.makeId.errors" class="invalid-feedback">
+            <div *ngIf="f.makeId.errors.required">Make is required</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="model" class="form-label">Model</label>
+          <select formControlName="modelId" class="form-select" [ngClass]="{ 'is-invalid': submitted && f.modelId.errors }">
+            <option selected>Choose...</option>
+            <option *ngFor="let c of model" [value]="c.id">{{c.name}}</option>
+          </select>
+          <div *ngIf="submitted && f.modelId.errors" class="invalid-feedback">
+            <div *ngIf="f.modelId.errors.required">Model is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <label for="registration" class="form-label">Registration</label>
+         
+          <input type="text" class="form-control" formControlName="registation" placeholder="G-RNAC”"
+          [ngClass]="{ 'is-invalid': submitted && f.registation.errors }">
+          <div *ngIf="submitted && f.registation.errors" class="invalid-feedback">
+            <div *ngIf="f.registation.errors.required">Registation is required</div>
+            <div *ngIf="f.registation.errors.pattern">Registation must be a valid EX :G-RNAC </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" class="form-control" formControlName="location" placeholder=""
+           [ngClass]="{ 'is-invalid': submitted && f.location.errors }">
+           <div *ngIf="submitted && f.location.errors" class="invalid-feedback">
+            <div *ngIf="f.location.errors.required">Location is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="date" class="form-label">Date</label>
+          <input type="text" placeholder="Datepicker" class="form-control" formControlName="date" 
+          bsDatepicker [ngClass]="{ 'is-invalid': submitted && f.date.errors }">
+          <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+            <div *ngIf="f.date.errors.required">Date is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 mt-2">
+          <button type="submit" class="btn btn-primary">Save </button>
+        </div>
+        <div>
+          <div [hidden]="!isNotificationHidden" class="alert alert-success" role="alert">{{notification}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+
+    </div>
+  </div>
+</form>
