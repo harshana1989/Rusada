@@ -27,7 +27,10 @@ namespace Rusada.Data.Mappers
             {
                 cfg.CreateMap<Make, MakeEntity>();
                 cfg.CreateMap<AirlineModel, ModelEntity>();
-                cfg.CreateMap<Spotter, SpotterEntity>();
+                cfg.CreateMap<Spotter, SpotterEntity>()
+                .ForMember(t => t.ModelName, m => m.MapFrom(u => u.Model.Name))
+                .ForMember(t => t.MakeName, m => m.MapFrom(u => u.Make.Name));
+                cfg.CreateMap<SpotterEntity, Spotter>();
 
 
             });

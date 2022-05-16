@@ -54,8 +54,7 @@ namespace Rusada.Data.Repositories
         {
             try
             {
-                var spotterList = this.entities.Spotter.AsNoTracking().ToList();
-                //var spotterList = this.entities.Spotter.Include(z => z.Make).Include(z => z.Model).ToList();
+                var spotterList = this.entities.Spotter.Include(z => z.Make).Include(z => z.Model).Where(z=>z.IsActive==true).AsNoTracking().ToList();
                 return this.entityMapper.Map<List<Spotter>, List<SpotterEntity>>(spotterList);
             }
             catch (Exception)
@@ -65,24 +64,54 @@ namespace Rusada.Data.Repositories
             }
         }
 
-        public async Task<SpotterEntity> Save(SpotterEntity clientNote)
+        public async Task<SpotterEntity> GetSpottersById(int SpotterId)
+        {
+            try
+            {
+                var spotter = this.entities.Spotter.Where(z=>z.Id== SpotterId).AsNoTracking().FirstOrDefault();
+                return this.entityMapper.Map<Spotter,SpotterEntity>(spotter);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public  async Task<SpotterEntity> Save(SpotterEntity clientNote)
         {
             try
             {
                 var spotter=entityMapper.Map<SpotterEntity,Spotter>(clientNote);
                 if (clientNote.Id != 0)
                 {
-                    var spotterList = this.entities.Spotter.FirstOrDefault(a => a.Id == clientNote.Id);
-                    if (spotterList == null)
+                    if (spotter.IsActive == false)
                     {
-                        this.entities.Spotter.Add(spotter);
-                        await this.entities.SaveChangesAsync();
+                        var spotterItem = this.entities.Spotter.FirstOrDefault(a => a.Id == spotter.Id);
+                        if (spotterItem != null)
+                        {
+                            spotterItem.IsActive = spotter.IsActive;
+                            this.entities.SaveChanges();
+                        }
+                    }
+                    else
+                    {
+                        var spotterItem = this.entities.Spotter.FirstOrDefault(a => a.Id == spotter.Id);
+                        if (spotterItem != null)
+                        {
+                            spotterItem.Location = spotter.Location;
+                            spotterItem.MakeId = spotter.MakeId;
+                            spotterItem.ModelId = spotter.ModelId;
+                            spotterItem.Registration = spotter.Registration;
+                            this.entities.SaveChanges();
+                        }
                     }
                 }
                 else
                 {
+                    spotter.Id= this.entities.Spotter.Max(a => a.Id)+1;
                     this.entities.Spotter.Add(spotter);
-                    await this.entities.SaveChangesAsync();
+                    this.entities.SaveChanges();
                 }
                 return entityMapper.Map<Spotter, SpotterEntity > (spotter);
             }
